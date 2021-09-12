@@ -14,6 +14,8 @@ import (
 
 type Layout struct {
 	Name string
+	Creator string
+	Modified string
 	Keys [][]string
 }
 
@@ -46,6 +48,12 @@ func loadlayout(f string) Layout {
 				l.Keys[line] = append(l.Keys[line], c)
 			}
 		}
+	}
+	creator := strings.TrimSpace(lines[4])
+	l.Creator = creator 
+	modified := strings.TrimSpace(lines[5])
+	if modified != "" {
+		l.Modified = modified
 	}
 	return l
 }

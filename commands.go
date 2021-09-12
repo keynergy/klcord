@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 func LayoutCommand(args []string) string {
 	name := strings.Join(args, " ")
@@ -9,7 +12,12 @@ func LayoutCommand(args []string) string {
 	if !ok {
 		return "Can't find that layout."
 	}
-	response := l.Name + "\n```\n"
+	response := fmt.Sprintf("__**%s**__\n", l.Name)
+	response += fmt.Sprintf("- Created by *%s*\n", l.Creator)
+	if l.Modified != "" {
+		response += fmt.Sprintf("- Mod of *%s*\n", l.Modified)
+	}
+	response += "```\n"
 	response += strings.Join(l.Keys[0], " ") + "\n"
 	response += strings.Join(l.Keys[1], " ") + "\n"
 	response += strings.Join(l.Keys[2], " ") + "\n```"
