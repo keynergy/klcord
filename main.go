@@ -20,6 +20,7 @@ type Layout struct {
 }
 
 var Layouts map[string]Layout
+var LayoutNames []string
 
 func loadlayout(f string) Layout {
 	var l Layout
@@ -73,7 +74,8 @@ func getlayouts() {
 	for _, f := range files {
 		l := loadlayout(filepath.Join(path, f))
 		if !strings.HasPrefix(f, "_") {
-			Layouts[strings.ToLower(l.Name)] = l		
+			Layouts[strings.ToLower(l.Name)] = l
+			LayoutNames = append(LayoutNames, l.Name)
 		}
 	}
 }

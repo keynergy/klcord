@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"github.com/schollz/closestmatch"
 )
 
 func LayoutCommand(args []string) string {
@@ -10,7 +11,14 @@ func LayoutCommand(args []string) string {
 	name = strings.ToLower(name)
 	l, ok := Layouts[name]
 	if !ok {
-		return "Can't find that layout."
+		bagSizes := []int{2, 3, 4}
+		cm := closestmatch.New(LayoutNames, bagSizes)
+		closest := cm.Closest(name)
+		if closest != "" {
+			return fmt.Sprintf("Can't find that layout. Did you mean %s?", closest)
+		} else {
+			return "Can't find that layout."
+		}
 	}
 	response := fmt.Sprintf("__**%s**__\n", l.Name)
 	response += fmt.Sprintf("- Created by *%s*\n", l.Creator)
