@@ -50,11 +50,18 @@ func loadlayout(f string) Layout {
 			}
 		}
 	}
-	creator := strings.TrimSpace(lines[4])
-	l.Creator = creator 
-	modified := strings.TrimSpace(lines[5])
-	if modified != "" {
-		l.Modified = modified
+	if len(lines) <= 4 {
+		fmt.Println("Warning: missing creator in layout", l.Name)
+		l.Creator = "Unknown"
+	} else {
+		creator := strings.TrimSpace(lines[4])
+		l.Creator = creator 
+	}
+	if len(lines) > 5 {
+		modified := strings.TrimSpace(lines[5])
+		if modified != "" {
+			l.Modified = modified
+		}
 	}
 	return l
 }
