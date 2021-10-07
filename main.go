@@ -68,11 +68,7 @@ func loadlayout(f string) Layout {
 
 func getlayouts() {
 	Layouts = make(map[string]Layout)
-	b, err := ioutil.ReadFile("layoutsdir")
-	if err != nil {
-		panic(err)
-	}
-	path := strings.TrimSpace(string(b))
+	path := "layouts"
 	dir, err := os.Open(path)
 	if err != nil {
 		panic(err)
