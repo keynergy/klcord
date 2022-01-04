@@ -21,9 +21,9 @@ func LayoutCommand(args []string) string {
 		}
 	}
 	response := fmt.Sprintf("__**%s**__\n", l.Name)
-	response += fmt.Sprintf("- Created by *%s*\n", l.Creator)
+	response += fmt.Sprintf("- Created by %s\n", l.Creator)
 	if l.Modified != "" {
-		response += fmt.Sprintf("- Mod of *%s*\n", l.Modified)
+		response += fmt.Sprintf("- Mod of %s\n", l.Modified)
 	}
 	response += "```\n"
 	response += strings.Join(l.Keys[0], " ") + "\n"
