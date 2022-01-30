@@ -1,0 +1,12 @@
+name = "RSI-Terminated"
+author = "Timeo Pochin"
+link = ""
+year = 0
+
+[formats.standard]
+matrix = [["z", "c", "y", "w", "k", "x", "l", "u", ",", "q"],
+["r", "s", "i", "t", "g", "m", "n", "e", "a", "o"],
+["j", "f", "p", "d", "b", "v", "h", "'", ".", "?"]]
+
+map = {}
+home_row = 1

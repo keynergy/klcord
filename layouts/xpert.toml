@@ -1,0 +1,12 @@
+name = "XPERT"
+author = "Rika Maria Wedding"
+link = "xpertkeyboard.com"
+year = 2003
+
+[formats.standard]
+matrix = [["x", "p", "r", "f", "y", "k", "u", "i", "o", "j"],
+["q", "s", "d", "f", "n", "h", "a", "e", "l", ";", "'"],
+["z", "w", "c", "v", "b", "g", "m", ",", ".", "/"]]
+
+map = {}
+home_row = 1

@@ -1,0 +1,12 @@
+name = "boo"
+author = "boo"
+link = "ballerboo.github.io/boolayout/"
+year = 2021
+
+[formats.standard]
+matrix = [[",", ".", "u", "c", "v", "q", "f", "d", "l", "y"],
+["a", "o", "e", "s", "g", "b", "n", "t", "r", "i"],
+[";", "x", "'", "w", "z", "p", "h", "m", "k", "j"]]
+
+map = {}
+home_row = 1

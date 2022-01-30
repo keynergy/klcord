@@ -1,0 +1,12 @@
+name = "QWERTY"
+author = "Christopher Latham Sholes"
+link = ""
+year = 1878
+
+[formats.standard]
+matrix = [["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"],
+["a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'"],
+["z", "x", "c", "v", "b", "n", "m", ",", ".", "/"]]
+
+map = {}
+home_row = 1

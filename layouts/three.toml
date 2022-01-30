@@ -1,0 +1,12 @@
+name = "Three"
+author = "Jack Rosenthal"
+link = "github.com/jackrosenthal/threelayout"
+year = 2016
+
+[formats.standard]
+matrix = [["q", "f", "u", "y", "z", "x", "k", "c", "w", "b"],
+["o", "h", "e", "a", "i", "d", "r", "t", "n", "s"],
+[",", "m", ".", "j", ";", "g", "l", "p", "v", "'"]]
+
+map = {}
+home_row = 1

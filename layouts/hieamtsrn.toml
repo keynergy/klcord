@@ -1,0 +1,12 @@
+name = "HIEAMTSRN"
+author = "Sasha Viminitz"
+link = ""
+year = 2014
+
+[formats.standard]
+matrix = [["b", "y", "o", "u", "'", "k", "d", "c", "l", "p", "q"],
+["h", "i", "e", "a", ",", "m", "t", "s", "r", "n", "v"],
+["x", "(", ")", ".", "?", "w", "g", "f", "j", "z"]]
+
+map = {}
+home_row = 1

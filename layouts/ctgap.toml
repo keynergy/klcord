@@ -1,0 +1,12 @@
+name = "CTGAP"
+author = "Colby Chai"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [["w", "c", "l", "d", "k", "j", "y", "o", "u", "/"],
+["r", "s", "t", "h", "m", "p", "n", "e", "i", "a"],
+["q", "v", "g", "f", "b", "z", "x", "'", ",", "."]]
+
+map = {}
+home_row = 1

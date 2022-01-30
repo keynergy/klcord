@@ -1,0 +1,12 @@
+name = "QWERF"
+author = "Michael Capewell"
+link = ""
+year = 0
+
+[formats.standard]
+matrix = [["q", "w", "e", "r", "f", "j", "y", "l", "k", ";"],
+["a", "s", "d", "t", "g", "h", "u", "i", "o", "p", "'"],
+["z", "x", "c", "v", "b", "n", "m", ",", ".", "/"]]
+
+map = {}
+home_row = 1

@@ -1,3 +1,8 @@
 token
 layoutsdir
 klcord
+
+
+# Added by cargo
+
+/target

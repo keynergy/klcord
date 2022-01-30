@@ -1,0 +1,12 @@
+name = "Engram"
+author = "Arno Klein"
+link = ""
+year = 2020
+
+[formats.standard]
+matrix = [["b", "y", "o", "u", "'", "\"", "l", "d", "w", "v", "z", "#", "@"],
+["c", "i", "e", "a", ",", ".", "h", "t", "s", "n", "q"],
+["g", "x", "j", "k", "-", "?", "r", "m", "f", "p"]]
+
+map = {}
+home_row = 1

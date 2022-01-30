@@ -1,0 +1,12 @@
+name = "ColemaQ"
+author = "nyfee"
+link = "colemaq.github.io/"
+year = 2021
+
+[formats.standard]
+matrix = [[";", "w", "f", "p", "b", "j", "l", "u", "y", "q"],
+["a", "r", "s", "t", "g", "m", "n", "e", "i", "o"],
+["z", "x", "c", "d", "k", "v", "h", "/", ".", ","]]
+
+map = {}
+home_row = 1

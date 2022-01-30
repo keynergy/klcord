@@ -1,0 +1,12 @@
+name = "Hands Down Reference"
+author = "Alan Reiser"
+link = "https://sites.google.com/alanreiser.com/handsdown"
+year = 2020
+
+[formats.standard]
+matrix = [["q", "c", "h", "p", "v", "k", "y", "o", "j", "/"],
+["r", "s", "n", "t", "g", "w", "u", "e", "i", "a"],
+["x", "m", "l", "d", "b", "z", "f", "'", ",", "."]]
+
+map = {}
+home_row = 1

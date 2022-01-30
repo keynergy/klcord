@@ -1,0 +1,12 @@
+name = "Foalmak"
+author = "semi"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [["b", "x", ",", "w", "v", "z", "/", "u", "t", "k"],
+["f", "o", "a", "l", "s", "n", "e", "i", "g", "h"],
+["p", "'", ".", "m", "c", "q", "j", "y", "d", "r"]]
+
+map = {}
+home_row = 1

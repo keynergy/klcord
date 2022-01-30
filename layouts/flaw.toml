@@ -1,0 +1,12 @@
+name = "FLAW"
+author = "semi"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [["f", "l", "a", "w", "p", "z", "k", "u", "r", "/"],
+["h", "s", "o", "y", "c", "m", "t", "e", "n", "i"],
+["b", "j", "'", "g", "v", "q", "d", ".", "x", ","]]
+
+map = {}
+home_row = 1

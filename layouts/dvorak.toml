@@ -1,0 +1,12 @@
+name = "Dvorak"
+author = "August Dvorak"
+link = ""
+year = 1936
+
+[formats.standard]
+matrix = [["'", ",", ".", "p", "y", "f", "g", "c", "r", "l", "/"],
+["a", "o", "e", "u", "i", "d", "h", "t", "n", "s", "-"],
+[";", "q", "j", "k", "x", "b", "m", "w", "v", "z"]]
+
+map = {}
+home_row = 1

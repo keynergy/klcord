@@ -1,0 +1,12 @@
+name = "QWPR"
+author = "Jameson Quinn"
+link = ""
+year = 0
+
+[formats.standard]
+matrix = [["q", "w", "p", "r", "f", "y", "u", "k", "l", ";"],
+["a", "s", "d", "t", "g", "h", "n", "i", "o", "e", "'"],
+["z", "x", "c", "v", "b", "j", "m", ",", ".", "/"]]
+
+map = {}
+home_row = 1

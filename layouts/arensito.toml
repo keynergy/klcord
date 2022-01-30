@@ -1,0 +1,12 @@
+name = "Arensito"
+author = "Håkon Hallingstad"
+link = "pvv.org/~hakonhal/main.cgi/keyboard"
+year = 2004
+
+[formats.standard]
+matrix = [["q", "l", ".", "p", "'", ";", "f", "u", "d", "k"],
+["a", "r", "e", "n", "b", "g", "s", "i", "t", "o"],
+["z", "w", ",", "h", "j", "v", "c", "y", "m", "x"]]
+
+map = {}
+home_row = 1

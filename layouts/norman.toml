@@ -1,0 +1,12 @@
+name = "Norman"
+author = "David Norman"
+link = ""
+year = 2013
+
+[formats.standard]
+matrix = [["q", "w", "d", "f", "k", "j", "u", "r", "l", ";"],
+["a", "s", "e", "t", "g", "y", "n", "i", "o", "h", "'"],
+["z", "x", "c", "v", "b", "p", "m", ",", ".", "/"]]
+
+map = {}
+home_row = 1
