@@ -432,7 +432,7 @@ dependencies = [
 [[package]]
 name = "keynergy"
 version = "0.1.0"
-source = "git+https://github.com/semilin/keynergy#978c2fb34da69e2bafef7c979fc4882b39d47737"
+source = "git+https://github.com/keynergy/keynergy-lib#8f04f2febf20d213a36c501029cd6f2134566ecf"
 dependencies = [
  "serde",
  "toml",

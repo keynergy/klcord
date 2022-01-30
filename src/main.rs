@@ -101,7 +101,7 @@ async fn main() {
     for f in dir.into_iter() {
         // this is horrible but I'm lazy
         // TODO fix
-        let mut l = Layout::load(f.unwrap().path().to_str().unwrap().to_string()).unwrap();
+        let mut l = Layout::load(f.unwrap().path().to_str().unwrap()).unwrap();
         if l.link == Some("".to_string()) {
             l.link = None;
         }
