@@ -60,7 +60,7 @@ impl EventHandler for Bot {
     }
 }
 
-fn display_matrix(m: &Vec<Vec<char>>) -> String {
+fn display_matrix(m: &[Vec<char>]) -> String {
     let mut s = String::new();
     for r in m.iter() {
         for c in r.iter() {
