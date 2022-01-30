@@ -60,7 +60,7 @@ impl EventHandler for Bot {
     }
 }
 
-fn display_matrix(m: &Vec<Vec<char>>) -> String {
+fn display_matrix(m: &[Vec<char>]) -> String {
     let mut s = String::new();
     for r in m.iter() {
         for c in r.iter() {
@@ -73,11 +73,16 @@ fn display_matrix(m: &Vec<Vec<char>>) -> String {
 }
 
 fn print_layout(l: &Layout) -> String {
+    let year = match l.year {
+	0 => "".to_string(),
+	_ => std::format!("({})", l.year)
+    };
     std::format!(
-        "**{}**\nCreated by {}\n```\n{}\n```",
-        l.name,
-        l.author,
-        display_matrix(&l.formats.standard.as_ref().unwrap().matrix)
+	"**{}**\nCreated by {} {}\n```\n{}\n```",
+	l.name,
+	l.author,
+	year,
+	display_matrix(&l.formats.standard.as_ref().unwrap().matrix)
     )
 }
 
