@@ -1,0 +1,12 @@
+name = "Kaehi"
+author = "Elliot George"
+link = ""
+year = 0
+
+[formats.standard]
+matrix = [["q", "w", "l", "d", "g", "j", "u", "o", "p", "/"],
+["n", "r", "s", "t", "m", "k", "a", "e", "h", "i", "'"],
+["z", "x", "c", "v", "b", "y", "f", ",", ".", ";"]]
+
+map = {}
+home_row = 1

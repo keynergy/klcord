@@ -1,0 +1,12 @@
+name = "Semimak"
+author = "semi"
+link = "semilin.github.io/semimak"
+year = 2021
+
+[formats.standard]
+matrix = [["f", "l", "h", "v", "z", "q", "w", "u", "o", "y"],
+["s", "r", "n", "t", "k", "c", "d", "e", "a", "i", ";"],
+["x", "'", "b", "m", "j", "p", "g", ",", ".", "/"]]
+
+map = {}
+home_row = 1

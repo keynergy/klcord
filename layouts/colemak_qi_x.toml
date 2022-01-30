@@ -1,0 +1,12 @@
+name = "Colemak Qi;x"
+author = "nyfee"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [[";", "l", "c", "m", "k", "j", "f", "u", "y", "q"],
+["a", "r", "s", "t", "g", "p", "n", "e", "i", "o", "'"],
+["z", "x", "w", "d", "v", "b", "h", "/", ".", ","]]
+
+map = {}
+home_row = 1

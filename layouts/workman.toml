@@ -1,0 +1,12 @@
+name = "Workman"
+author = "Oj Bucao"
+link = "workmanlayout.org"
+year = 2010
+
+[formats.standard]
+matrix = [["q", "d", "r", "w", "b", "j", "f", "u", "p", ";"],
+["a", "s", "h", "t", "g", "y", "n", "e", "o", "i", "'"],
+["z", "x", "m", "c", "v", "k", "l", ",", ".", "/"]]
+
+map = {}
+home_row = 1

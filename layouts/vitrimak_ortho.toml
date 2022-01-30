@@ -1,0 +1,12 @@
+name = "Vitrimak Ortho"
+author = "semi"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [["e", ".", "v", "i", "a", "c", "o", "q", "y", "t"],
+["s", "j", "/", "d", "g", "m", "p", "x", ",", "w"],
+["r", "k", "'", "l", "n", "f", "u", "z", "b", "h"]]
+
+map = {}
+home_row = 1

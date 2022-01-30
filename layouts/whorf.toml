@@ -1,0 +1,12 @@
+name = "whorf"
+author = "whorf (NotGate)"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [["f", "l", "h", "d", "m", "v", "w", "o", "u", ","],
+["s", "r", "n", "t", "k", "g", "y", "a", "e", "i", "/"],
+["x", "j", "b", "z", "q", "p", "c", "'", ";", "."]]
+
+map = {}
+home_row = 1

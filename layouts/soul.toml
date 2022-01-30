@@ -1,0 +1,12 @@
+name = "Soul"
+author = "Kennet Chaz"
+link = ""
+year = 0
+
+[formats.standard]
+matrix = [["q", "w", "l", "d", "p", "k", "m", "u", "y", ";"],
+["a", "s", "r", "t", "g", "f", "n", "e", "i", "o", "'"],
+["z", "x", "c", "v", "j", "b", "h", ",", ".", "/"]]
+
+map = {}
+home_row = 1

@@ -1,0 +1,12 @@
+name = "Asset"
+author = "David Piepgrass"
+link = ""
+year = 2006
+
+[formats.standard]
+matrix = [["q", "w", "j", "f", "g", "y", "p", "u", "l", ";"],
+["a", "s", "e", "t", "d", "h", "n", "i", "o", "r", "'"],
+["z", "x", "c", "v", "b", "k", "m", ",", ".", "/"]]
+
+map = {}
+home_row = 1

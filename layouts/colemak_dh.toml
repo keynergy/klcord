@@ -1,0 +1,12 @@
+name = "Colemak DH"
+author = "stevep99"
+link = "colemakmods.github.io/mod-dh"
+year = 2014
+
+[formats.standard]
+matrix = [["q", "w", "f", "p", "b", "j", "l", "u", "y", ";"],
+["a", "r", "s", "t", "g", "m", "n", "e", "i", "o", "'"],
+["z", "x", "c", "d", "v", "k", "h", ",", ".", "/"]]
+
+map = {}
+home_row = 1

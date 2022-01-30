@@ -1,0 +1,12 @@
+name = "Halmak"
+author = "Nikolay Nemshilov"
+link = ""
+year = 2016
+
+[formats.standard]
+matrix = [["w", "l", "r", "b", "z", ";", "q", "u", "d", "j"],
+["s", "h", "n", "t", ",", ".", "a", "e", "o", "i", "'"],
+["f", "m", "v", "c", "/", "g", "p", "x", "k", "y"]]
+
+map = {}
+home_row = 1

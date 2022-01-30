@@ -1,0 +1,12 @@
+name = "MTGAP30"
+author = "Michael Dickens"
+link = ""
+year = 2012
+
+[formats.standard]
+matrix = [["y", "p", "o", "u", "j", "k", "d", "l", "c", "w"],
+["i", "n", "e", "a", ",", "m", "h", "t", "s", "r"],
+["q", "z", "/", ".", ";", "b", "f", "g", "v", "x"]]
+
+map = {}
+home_row = 1

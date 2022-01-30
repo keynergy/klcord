@@ -1,0 +1,12 @@
+name = "Capewell"
+author = "Michael Capewell"
+link = ""
+year = 2005
+
+[formats.standard]
+matrix = [[".", "y", "w", "d", "f", "j", "p", "l", "u", "q", "/"],
+["a", "e", "r", "s", "g", "b", "t", "n", "i", "o", "-"],
+["x", "z", "c", "v", ";", "k", "m", "h", ",", "'"]]
+
+map = {}
+home_row = 1

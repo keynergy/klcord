@@ -1,0 +1,12 @@
+name = "Colemak Qiou"
+author = "mainstream"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [["q", "l", "c", "m", "k", "j", "f", "o", "y", "'"],
+["a", "r", "s", "t", "g", "p", "n", "e", "i", "u"],
+["z", "x", "w", "d", "v", "b", "h", ",", ".", "/"]]
+
+map = {}
+home_row = 1

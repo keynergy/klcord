@@ -1,0 +1,12 @@
+name = "Typehack"
+author = "typehack"
+link = ""
+year = 0
+
+[formats.standard]
+matrix = [["j", "g", "h", "p", "f", "q", "v", "o", "u", ";"],
+["r", "s", "n", "t", "k", "y", "i", "a", "e", "l"],
+["z", "w", "m", "d", "b", "c", ",", "'", ".", "x"]]
+
+map = {}
+home_row = 1

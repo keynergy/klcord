@@ -1,0 +1,12 @@
+name = "Heart"
+author = "Heart"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [["q", "g", "d", "v", "x", "j", "y", "o", "u", ";"],
+["r", "s", "t", "h", "l", "p", "n", "a", "i", "e"],
+["w", "c", "b", "m", "k", "z", "f", ",", ".", "/"]]
+
+map = {}
+home_row = 1

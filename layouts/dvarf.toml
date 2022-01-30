@@ -1,0 +1,12 @@
+name = "Dvarf"
+author = "Oxey"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [["'", "u", "o", "w", "p", "j", "v", "d", "r", "f"],
+["a", "i", "e", "y", "g", "l", "h", "t", "n", "s"],
+[",", ".", ";", "c", "q", "k", "m", "b", "x", "z"]]
+
+map = {}
+home_row = 1

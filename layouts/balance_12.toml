@@ -1,0 +1,12 @@
+name = "Balance-12"
+author = "Sasha Viminitz"
+link = ""
+year = 0
+
+[formats.standard]
+matrix = [["p", "l", "c", "d", "w", "'", "u", "o", "y", "k", "q"],
+["n", "r", "s", "t", "m", ",", "a", "e", "i", "h", "v"],
+["z", "j", "f", "g", "b", "?", ".", "(", ")", "x"]]
+
+map = {}
+home_row = 1

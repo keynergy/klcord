@@ -1,0 +1,12 @@
+name = "TNWMLC"
+author = "Martin Krzywinski"
+link = "mkweb.bcgsc.ca/carpalx/"
+year = 2005
+
+[formats.standard]
+matrix = [["t", "n", "w", "m", "l", "c", "b", "p", "r", "h", "[", "]", "\\"],
+["s", "g", "x", "j", "f", "k", "q", "z", "v", ";", "'"],
+["e", "a", "d", "i", "o", "y", "u", ",", ".", "/"]]
+
+map = {}
+home_row = 1

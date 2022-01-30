@@ -1,0 +1,12 @@
+name = "ADNW-English-Bigram"
+author = "Andreas Wettstein"
+link = ""
+year = 0
+
+[formats.standard]
+matrix = [["q", "y", "u", ".", "?", "z", "m", "l", "d", "b", "p"],
+["s", "i", "e", "a", "o", "h", "n", "r", "t", "c", "g"],
+["j", ")", "'", ",", "(", "f", "x", "w", "k", "v"]]
+
+map = {}
+home_row = 1
