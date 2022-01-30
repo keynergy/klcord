@@ -77,11 +77,16 @@ fn print_layout(l: &Layout) -> String {
 	0 => "".to_string(),
 	_ => std::format!("({})", l.year)
     };
+    let link = match &l.link {
+	Some(x) => std::format!("<https://{}>\n", x),
+	None => "".to_string()
+    };
     std::format!(
-	"**{}**\nCreated by {} {}\n```\n{}\n```",
+	"**{}**\nCreated by {} {}\n{}```\n{}\n```",
 	l.name,
 	l.author,
 	year,
+	link,
 	display_matrix(&l.formats.standard.as_ref().unwrap().matrix)
     )
 }
