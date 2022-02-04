@@ -1,0 +1,12 @@
+name = "Whorf6"
+author = "Apsu"
+link = ""
+year = 2022
+
+[formats.standard]
+matrix = [["v", "l", "h", "k", "j", "g", "w", "o", "u", "."],
+["s", "r", "n", "t", "m", "y", "d", "e", "a", "i"],
+["x", "q", "b", "f", "z", "p", "c", "'", ",", ";"]]
+
+map = {}
+home_row = 1
