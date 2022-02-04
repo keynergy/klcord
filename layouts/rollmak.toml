@@ -1,0 +1,12 @@
+name = "Rollmak"
+author = "Apsu"
+link = ""
+year = 2022
+
+[formats.standard]
+matrix = [["q", "w", "f", "p", "b", "z", "l", "u", "o", ";"],
+["c", "r", "s", "t", "g", "m", "n", "e", "a", "i"],
+["v", "x", "y", "d", "k", "j", "h", "/", ",", "."]]
+
+map = {}
+home_row = 1

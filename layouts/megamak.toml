@@ -1,0 +1,12 @@
+name = "Megamak"
+author = "Smudge"
+link = ""
+year = 2022
+
+[formats.standard]
+matrix = [["x", "l", "c", "w", "k", "z", "f", "u", "o", ";"],
+["y", "r", "s", "t", "m", "b", "n", "e", "a", "i"],
+["q", "j", "g", "d", "v", "p", "h", "'", ",", "."]]
+
+map = {}
+home_row = 1
