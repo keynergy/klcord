@@ -1,12 +1,12 @@
 name = "Calemog"
 author = "Smudge"
 link = ""
-year = 2022
+year = 2021
 
 [formats.standard]
 matrix = [["x", "l", "c", "w", "k", "z", "f", "u", "y", ";"],
 ["o", "r", "s", "t", "g", "b", "n", "e", "i", "a"],
-["j", "v", "d", "m", "q", "p", "h", "'", ",", "."]]
+[ "q", "j", "v", "d", "m", "p", "h", "'", ",", "."]]
 
 map = {}
 home_row = 1
