@@ -1,7 +1,7 @@
-name = "Tahan"
-author = "groszak1"
+name = "TAHAN"
+author = "hughlaurie1959"
 link = ""
-year = 2022
+year = 2021
 
 [formats.standard]
 matrix = [["t", "a", "h", "z", "y", "x", "u", "i", "o", "p"],
