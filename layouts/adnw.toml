@@ -1,0 +1,12 @@
+name = "AdNW"
+author = "Various artists"
+link = "https://www.neo-layout.org/Layouts/"
+year = 2010
+
+[formats.standard]
+matrix = [["k", "u", "ü", ".", "ä", "v", "g", "c", "l", "j", "f"],
+["h", "i", "e", "a", "o", "d", "t", "r", "n", "s", "ß"],
+["x", "y", "ö", ",", "q", "b", "p", "w", "m", "z"]]
+
+map = {}
+home_row = 1

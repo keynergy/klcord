@@ -1,0 +1,12 @@
+name = "Mine"
+author = "Effchen"
+link = "https://www.neo-layout.org/Layouts/"
+year = 2021
+
+[formats.standard]
+matrix = [["z", "l", "u", "a", "j", "w", "b", "d", "g", "y", "q"],
+["c", "r", "i", "e", "o", "m", "n", "t", "h", "s"],
+["v", "x", "ü", "ä", "ö", "p", "f", ",", ".", "k"]]
+
+map = {}
+home_row = 1
