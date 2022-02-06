@@ -1,13 +1,13 @@
 name = "Snug"
 author = "mainstream"
 link = ""
-year = 2021
+year = 2022
 
 [formats.standard]
 matrix = [
-  ["x", "l", "d", "m", "b", "y", "w", "o", "u", "q"],
-  ["s", "r", "t", "n", "f", "p", "c", "e", "i", "a"],
-  ["z", "j", "k", "h", "v", "'", "g", "/", ",", "."],
+  ["x", "l", "d", "m", "b", "y", "f", "o", "u", "'"],
+  ["s", "r", "t", "c", "g", "p", "n", "e", "i", "a"],
+  ["z", "j", "k", "w", "v", "q", "h", "/", ",", "."],
 ]
 
 map = {}
