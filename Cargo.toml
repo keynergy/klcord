@@ -9,3 +9,4 @@ edition = "2021"
 keynergy = { git = "https://github.com/keynergy/keynergy-lib" }
 serenity = { version = "0.10", default-features = false, features = ["client", "gateway", "rustls_backend", "model"]}
 tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+rust-fuzzy-search = "0.1.1"
