@@ -1,0 +1,12 @@
+name = "Vou"
+author = "Various artists"
+link = "https://www.neo-layout.org/Layouts/"
+year = 2019
+
+[formats.standard]
+matrix = [["v", ".", "o", "u", "ä", "q", "g", "l", "h", "f", "j"],
+["c", "a", "e", "i", "y", "b", "t", "r", "n", "s", "ß"],
+["z", "x", ",", "ü", "ö", "p", "d", "w", "m", "k"]]
+
+map = {}
+home_row = 1

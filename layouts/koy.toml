@@ -1,0 +1,12 @@
+name = "Koy"
+author = "Various artists"
+link = "https://www.neo-layout.org/Layouts/"
+year = 2012
+
+[formats.standard]
+matrix = [["k", ".", "o", ",", "y", "v", "g", "c", "l", "ß", "z"],
+["h", "a", "e", "i", "u", "d", "t", "r", "n", "s"],
+["x", "q", "ä", "ü", "ö", "b", "p", "w", "m", "j"]]
+
+map = {}
+home_row = 1

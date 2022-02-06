@@ -1,0 +1,12 @@
+name = "Bone"
+author = "Effchen and Darnos"
+link = "https://www.neo-layout.org/Layouts/"
+year = 2014
+
+[formats.standard]
+matrix = [["j", "d", "u", "a", "x", "h", "l", "m", "w", "ß"],
+["c", "t", "i", "e", "o", "b", "n", "r", "s", "g", "q"],
+["f", "v", "ü", "ä", "ö", "y", "z", ",", ".", "k"]]
+
+map = {}
+home_row = 1

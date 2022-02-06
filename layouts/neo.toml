@@ -1,0 +1,12 @@
+name = "Neo"
+author = "Hanno"
+link = "https://www.neo-layout.org/Layouts/"
+year = 2012
+
+[formats.standard]
+matrix = [["x", "v", "l", "c", "w", "k", "h", "g", "f", "q", "ß"],
+["u", "i", "a", "e", "o", "s", "n", "r", "t", "d", "y"],
+["ü", "ö", "ä", "p", "z", "b", "m", ",", ".", "j"]]
+
+map = {}
+home_row = 1
