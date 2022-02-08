@@ -1,0 +1,12 @@
+name = "Whorfmax Ortho"
+author = "triple-a"
+link = ""
+year = 2022
+
+[formats.standard]
+matrix = [["f", "l", "h", "v", "q", "z", "w", "o", "u", ","],
+["s", "r", "n", "t", "m", "c", "d", "a", "e", "i", "/"],
+["x", "j", "b", "y", "k", "p", "g", "'", ";", "."]]
+
+map = {}
+home_row = 1
