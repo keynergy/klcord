@@ -1,7 +1,7 @@
 name = "Colemak"
 author = "Shai Coleman"
 link = "colemak.com"
-year = 2008
+year = 2006
 
 [formats.standard]
 matrix = [["q", "w", "f", "p", "g", "j", "l", "u", "y", ";"],

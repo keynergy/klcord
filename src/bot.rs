@@ -11,14 +11,14 @@ use crate::utility::*;
 
 pub struct Bot {
     layouts: HashMap<String, Layout>,
-    names: Vec<String>
+    names: Vec<String>,
 }
 
 impl Bot {
     pub fn new() -> Bot {
         Bot {
-        layouts: HashMap::new(),
-        names: Vec::new()
+            layouts: HashMap::new(),
+            names: Vec::new(),
         }
     }
 
@@ -35,7 +35,7 @@ impl Bot {
                             l.link = None;
                         }
                         let name = l.name.to_ascii_lowercase();
-                        bot.layouts.insert(name.clone(), l);    //we do a little cloning :tf:
+                        bot.layouts.insert(name.clone(), l); //we do a little cloning :tf:
                         bot.names.push(name);
                     }
                 }
@@ -54,7 +54,9 @@ impl EventHandler for Bot {
     // Event handlers are dispatched through a threadpool, and so multiple
     // events can be dispatched simultaneously.
     async fn message(&self, ctx: Context, msg: Message) {
-
+	if msg.author.bot {
+	    return;
+	}
         if msg.content.starts_with("!layout") {
             let split: Vec<&str> = msg.content.split_whitespace().collect();
             if split.len() == 1 {
@@ -68,14 +70,60 @@ impl EventHandler for Bot {
 
                 match self.layouts.get(&name) {
                     None => {
-                        send_message(&ctx, &msg, format!(
-                            "This layout does not exist.\n\
-                             Did you mean {}?", closest_match(name, &self.names))).await;
+                        send_message(
+                            &ctx,
+                            &msg,
+                            format!(
+                                "This layout does not exist.\n\
+				 Did you mean {}?",
+                                closest_match(name, &self.names)
+                            ),
+                        )
+                        .await;
                     }
                     Some(l) => {
                         send_message(&ctx, &msg, print_layout(l)).await;
                     }
                 }
+            }
+        } else if msg.content.starts_with("!translate") {
+	    let split: Vec<&str> = msg.content.split_whitespace().collect();
+            if split.len() < 4 {
+                send_message(
+                    &ctx,
+                    &msg,
+                    "Usage: `!translate <from layout> <to layout> a sentence`",
+                )
+                    .await;
+            } else {
+                let f = &split[1].replace("_", " ").to_ascii_lowercase();
+                let t = &split[2].replace("_", " ").to_ascii_lowercase();
+		println!("{} {}", f, t);
+                let from = match self.layouts.get(f) {
+		    Some(x) => x.formats.standard.as_ref().unwrap(),
+		    None => {
+                        send_message(&ctx, &msg, format!("Layout {} does not exist.", f)).await;
+                        return;
+		    }
+                };
+
+                let to = match self.layouts.get(t) {
+                    Some(x) => x.formats.standard.as_ref().unwrap(),
+                    None => {
+                        send_message(&ctx, &msg, format!("Layout {} does not exist.", t)).await;
+                        return;
+                    }
+                };
+
+                let text = split[3..].join(" ");
+                let mut newtext = String::new();
+                for c in text.chars() {
+                    newtext.push(match from.map.get(&c) {
+                        None => c,
+                        Some(x) => *to.pos_key(*x),
+                    });
+                }
+                send_message(&ctx, &msg, newtext).await;
             }
         }
     }
