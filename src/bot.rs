@@ -68,18 +68,28 @@ impl EventHandler for Bot {
                 }
 
                 match self.layouts.get(&name) {
-                    None => {
-                        send_message(
-                            &ctx,
-                            &msg,
-                            format!(
-                                "This layout does not exist.\n\
-				 Did you mean {}?",
-                                closest_match(name, &self.names)
-                            ),
-                        )
-                            .await;
-                    }
+                    None => match &name[..] {
+			"taipo" => {
+			    let path = vec!["taipo.png"];
+			    let result = msg.channel_id.send_files(&ctx, path, |m| m.content("Taipo | Created by whorf"))
+				.await;
+			    result.unwrap();
+			},
+			_ => {
+                            send_message(
+				&ctx,
+				&msg,
+				format!(
+                                    "This layout does not exist.\n\
+				     Did you mean {}?",
+                                    closest_match(name, &self.names)
+				),
+                            )
+				.await;
+			}
+			
+                    },
+
                     Some(l) => {
 			send_message(&ctx, &msg, print_layout(l)).await;
                     }
