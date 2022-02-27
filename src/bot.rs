@@ -6,6 +6,7 @@ use serenity::{
 };
 use std::collections::HashMap;
 use std::fs;
+use layoutexport::XkbLayout;
 
 use crate::utility::*;
 
@@ -79,10 +80,10 @@ impl EventHandler for Bot {
                                 closest_match(name, &self.names)
                             ),
                         )
-                        .await;
+                            .await;
                     }
                     Some(l) => {
-                        send_message(&ctx, &msg, print_layout(l)).await;
+			send_message(&ctx, &msg, print_layout(l)).await;
                     }
                 }
             }
@@ -125,7 +126,40 @@ impl EventHandler for Bot {
                 }
                 send_message(&ctx, &msg, newtext).await;
             }
-        }
+        } else if msg.content.starts_with("!xkb") {
+	    let split: Vec<&str> = msg.content.split_whitespace().collect();
+	    if split.len() == 1 {
+		send_message(&ctx, &msg, "Usage: `!xkb LAYOUT`").await;
+	    }
+	    let name = split[1..].join(" ").to_ascii_lowercase();
+	    match self.layouts.get(&name) {
+                None => {
+                    send_message(
+                        &ctx,
+                        &msg,
+                        format!(
+                            "This layout does not exist.\n\
+			     Did you mean {}?",
+                            closest_match(name, &self.names)
+                        ),
+                    )
+			.await;
+                },
+		Some(l) => {
+		    let xkb = match XkbLayout::from(&l) {
+			Ok(x) => x,
+			Err(_) => return
+		    };
+
+		    send_message(
+			&ctx,
+			&msg,
+			xkb.content
+		    ).await;
+		    
+		}
+	    };
+	}
     }
 
     // Set a handler to be called on the `ready` event. This is called when a
@@ -135,6 +169,6 @@ impl EventHandler for Bot {
     //
     // In this case, just print what the current user's username is.
     async fn ready(&self, _: Context, ready: Ready) {
-        println!("{} is connected!", ready.user.name);
+	println!("{} is connected!", ready.user.name);
     }
 }
