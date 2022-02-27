@@ -1,4 +1,4 @@
-use keynergy::layout::Layout;
+use keynergy::Layout;
 use serenity::{
     async_trait,
     model::{channel::Message, gateway::Ready},
@@ -118,7 +118,7 @@ impl EventHandler for Bot {
                 let text = split[3..].join(" ");
                 let mut newtext = String::new();
                 for c in text.chars() {
-                    newtext.push(match from.map.get(&c) {
+                    newtext.push(match from.map.get(&c.to_ascii_lowercase()) {
                         None => c,
                         Some(x) => *to.pos_key(*x),
                     });
