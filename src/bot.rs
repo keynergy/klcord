@@ -27,17 +27,15 @@ impl Bot {
         let dir = fs::read_dir(format!("./{}", dir)).unwrap();
         print!("Reading layouts... ");
 
-        for file in dir.into_iter() {
-            if let Ok(dir_entry) = file {
-                if let Some(path) = dir_entry.path().to_str() {
-                    if let Ok(mut l) = Layout::load(path) {
-                        if l.link == Some(String::from("")) {
-                            l.link = None;
-                        }
-                        let name = l.name.to_ascii_lowercase();
-                        bot.layouts.insert(name.clone(), l); //we do a little cloning :tf:
-                        bot.names.push(name);
+        for file in dir.flatten() {
+            if let Some(path) = file.path().to_str() {
+                if let Ok(mut l) = Layout::load(path) {
+                    if l.link == Some(String::from("")) {
+                        l.link = None;
                     }
+                    let name = l.name.to_ascii_lowercase();
+                    bot.layouts.insert(name.clone(), l); //we do a little cloning :tf:
+                    bot.names.push(name);
                 }
             }
         }
@@ -64,17 +62,19 @@ impl EventHandler for Bot {
             } else {
                 let mut name = split[1..].join(" ").to_ascii_lowercase();
 
-                if name == String::from("mtgap") {
+                if name == *"mtgap" {
                     name = String::from("mtgap30");
                 }
 
                 match self.layouts.get(&name) {
                     None => match &name[..] {
                         "taipo" => {
-			    let path = vec!["taipo.png"];
-			    let result = msg.channel_id.send_files(&ctx, path, |m| m.content("Taipo | Created by whorf"))
+                            let path = vec!["taipo.png"];
+                            let result = msg
+                                .channel_id
+                                .send_files(&ctx, path, |m| m.content("Taipo | Created by whorf"))
                                 .await;
-			    result.unwrap();
+                            result.unwrap();
                         }
                         _ => {
                             send_message(
