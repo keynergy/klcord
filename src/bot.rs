@@ -152,7 +152,7 @@ impl EventHandler for Bot {
 		    send_message(
 			&ctx,
 			&msg,
-			xkb.content
+			format!("```\n{}\n```", xkb.content)
 		    ).await;
 		    
 		}
