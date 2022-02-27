@@ -54,9 +54,9 @@ impl EventHandler for Bot {
     // Event handlers are dispatched through a threadpool, and so multiple
     // events can be dispatched simultaneously.
     async fn message(&self, ctx: Context, msg: Message) {
-	if msg.author.bot {
-	    return;
-	}
+        if msg.author.bot {
+            return;
+        }
         if msg.content.starts_with("!layout") {
             let split: Vec<&str> = msg.content.split_whitespace().collect();
             if split.len() == 1 {
@@ -69,25 +69,33 @@ impl EventHandler for Bot {
                 }
 
                 match self.layouts.get(&name) {
-                    None => {
-                        send_message(
-                            &ctx,
-                            &msg,
-                            format!(
-                                "This layout does not exist.\n\
-				 Did you mean {}?",
-                                closest_match(name, &self.names)
-                            ),
-                        )
-                        .await;
-                    }
+                    None => match &name[..] {
+                        "taipo" => {
+			    let path = vec!["taipo.png"];
+			    let result = msg.channel_id.send_files(&ctx, path, |m| m.content("Taipo | Created by whorf"))
+                                .await;
+			    result.unwrap();
+                        }
+                        _ => {
+                            send_message(
+                                &ctx,
+                                &msg,
+                                format!(
+                                    "This layout does not exist.\n\
+				     Did you mean {}?",
+                                    closest_match(name, &self.names)
+                                ),
+                            )
+				.await;
+                        }
+                    },
                     Some(l) => {
                         send_message(&ctx, &msg, print_layout(l)).await;
                     }
                 }
             }
         } else if msg.content.starts_with("!translate") {
-	    let split: Vec<&str> = msg.content.split_whitespace().collect();
+            let split: Vec<&str> = msg.content.split_whitespace().collect();
             if split.len() < 4 {
                 send_message(
                     &ctx,
@@ -98,13 +106,13 @@ impl EventHandler for Bot {
             } else {
                 let f = &split[1].replace("_", " ").to_ascii_lowercase();
                 let t = &split[2].replace("_", " ").to_ascii_lowercase();
-		println!("{} {}", f, t);
+                println!("{} {}", f, t);
                 let from = match self.layouts.get(f) {
-		    Some(x) => x.formats.standard.as_ref().unwrap(),
-		    None => {
+                    Some(x) => x.formats.standard.as_ref().unwrap(),
+                    None => {
                         send_message(&ctx, &msg, format!("Layout {} does not exist.", f)).await;
                         return;
-		    }
+                    }
                 };
 
                 let to = match self.layouts.get(t) {
