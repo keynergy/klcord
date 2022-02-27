@@ -9,7 +9,7 @@ pub async fn send_message(ctx: &Context, msg: &Message, content: impl std::fmt::
     }
 }
 
-pub fn closest_match(name: String, names: &Vec<String>) -> String {
+pub fn closest_match(name: String, names: &[String]) -> String {
     let names = names.iter().map(String::as_ref).collect::<Vec<&str>>();
     fuzzy_search_best_n(&name, &names, 1)[0].0.to_string()
 }

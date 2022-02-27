@@ -1,4 +1,4 @@
-use keynergy::layout::Layout;
+use keynergy::Layout;
 use serenity::{
     async_trait,
     model::{channel::Message, gateway::Ready},
@@ -28,17 +28,15 @@ impl Bot {
         let dir = fs::read_dir(format!("./{}", dir)).unwrap();
         print!("Reading layouts... ");
 
-        for file in dir.into_iter() {
-            if let Ok(dir_entry) = file {
-                if let Some(path) = dir_entry.path().to_str() {
-                    if let Ok(mut l) = Layout::load(path) {
-                        if l.link == Some(String::from("")) {
-                            l.link = None;
-                        }
-                        let name = l.name.to_ascii_lowercase();
-                        bot.layouts.insert(name.clone(), l); //we do a little cloning :tf:
-                        bot.names.push(name);
+        for file in dir.flatten() {
+            if let Some(path) = file.path().to_str() {
+                if let Ok(mut l) = Layout::load(path) {
+                    if l.link == Some(String::from("")) {
+                        l.link = None;
                     }
+                    let name = l.name.to_ascii_lowercase();
+                    bot.layouts.insert(name.clone(), l); //we do a little cloning :tf:
+                    bot.names.push(name);
                 }
             }
         }
@@ -55,9 +53,9 @@ impl EventHandler for Bot {
     // Event handlers are dispatched through a threadpool, and so multiple
     // events can be dispatched simultaneously.
     async fn message(&self, ctx: Context, msg: Message) {
-	if msg.author.bot {
-	    return;
-	}
+        if msg.author.bot {
+            return;
+        }
         if msg.content.starts_with("!layout") {
             let split: Vec<&str> = msg.content.split_whitespace().collect();
             if split.len() == 1 {
@@ -65,7 +63,7 @@ impl EventHandler for Bot {
             } else {
                 let mut name = split[1..].join(" ").to_ascii_lowercase();
 
-                if name == String::from("mtgap") {
+                if name == *"mtgap" {
                     name = String::from("mtgap30");
                 }
 
@@ -88,7 +86,7 @@ impl EventHandler for Bot {
                 }
             }
         } else if msg.content.starts_with("!translate") {
-	    let split: Vec<&str> = msg.content.split_whitespace().collect();
+            let split: Vec<&str> = msg.content.split_whitespace().collect();
             if split.len() < 4 {
                 send_message(
                     &ctx,
@@ -99,13 +97,13 @@ impl EventHandler for Bot {
             } else {
                 let f = &split[1].replace("_", " ").to_ascii_lowercase();
                 let t = &split[2].replace("_", " ").to_ascii_lowercase();
-		println!("{} {}", f, t);
+                println!("{} {}", f, t);
                 let from = match self.layouts.get(f) {
-		    Some(x) => x.formats.standard.as_ref().unwrap(),
-		    None => {
+                    Some(x) => x.formats.standard.as_ref().unwrap(),
+                    None => {
                         send_message(&ctx, &msg, format!("Layout {} does not exist.", f)).await;
                         return;
-		    }
+                    }
                 };
 
                 let to = match self.layouts.get(t) {
@@ -119,7 +117,7 @@ impl EventHandler for Bot {
                 let text = split[3..].join(" ");
                 let mut newtext = String::new();
                 for c in text.chars() {
-                    newtext.push(match from.map.get(&c) {
+                    newtext.push(match from.map.get(&c.to_ascii_lowercase()) {
                         None => c,
                         Some(x) => *to.pos_key(*x),
                     });
