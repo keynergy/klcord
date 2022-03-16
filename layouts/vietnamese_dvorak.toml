@@ -1,0 +1,12 @@
+name = "Vietnamese Dvorak"
+author = "qwertron"
+link = ""
+year = 2022
+
+[formats.standard]
+matrix = [[",", "w", "o", ";", "'", "z", "f", "g", "m", "l", "-"],
+["a", "i", "e", "u", "k", "d", "h", "t", "n", "s", "x"],
+["q", "y", "c", ".", "/", "j", "r", "p", "b", "v"]]
+
+map = {}
+home_row = 1
