@@ -4,8 +4,8 @@ link = "xpertkeyboard.com"
 year = 2003
 
 [formats.standard]
-matrix = [["x", "p", "r", "f", "y", "k", "u", "i", "o", "j"],
-["q", "s", "d", "f", "n", "h", "a", "e", "l", ";", "'"],
+matrix = [["x", "p", "e", "r", "t", "k", "u", "i", "o", "j"],
+["q", "s", "d", "f", "n", "h", "a", "e", "l", "k"],
 ["z", "w", "c", "v", "b", "g", "m", ",", ".", "/"]]
 
 map = {}
