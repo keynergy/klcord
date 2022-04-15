@@ -129,7 +129,7 @@ impl EventHandler for Bot {
                 for c in text.chars() {
                     newtext.push(match from.map.get(&c.to_ascii_lowercase()) {
                         None => c,
-                        Some(x) => *to.pos_key_unsafe(*x),
+                        Some(x) => *to.pos_key(*x),
                     });
                 }
                 send_message(&ctx, &msg, newtext).await;
