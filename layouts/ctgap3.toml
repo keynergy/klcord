@@ -1,6 +1,6 @@
 name = "CTGAP 3.0"
 author = "Colby Chai"
-link = ""
+link = "https://github.com/CTGAP/ctgap-keyboard-layout"
 year = 2021
 
 [formats.standard]
