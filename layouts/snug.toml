@@ -1,6 +1,6 @@
 name = "Snug"
 author = "mainstream"
-link = "https://github.com/mndscp/snug-keyboard-layout"
+link = "github.com/mndscp/snug-keyboard-layout"
 year = 2022
 
 [formats.standard]
