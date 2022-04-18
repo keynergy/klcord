@@ -1,6 +1,6 @@
 name = "whorf"
 author = "whorf (NotGate)"
-link = ""
+link = "github.com/whorfian/whorf"
 year = 2021
 
 [formats.standard]
