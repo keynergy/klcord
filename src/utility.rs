@@ -1,3 +1,6 @@
+use std::collections::HashMap;
+use std::fs;
+
 use keynergy::layout::Layout;
 use rust_fuzzy_search::fuzzy_search_best_n;
 use serenity::client::Context;
@@ -9,9 +12,26 @@ pub async fn send_message(ctx: &Context, msg: &Message, content: impl std::fmt::
     }
 }
 
-pub fn closest_match(name: String, names: &[String]) -> String {
-    let names = names.iter().map(String::as_ref).collect::<Vec<&str>>();
-    fuzzy_search_best_n(&name, &names, 1)[0].0.to_string()
+pub fn get_layouts_from_dir(dir: &str) -> HashMap<String, Layout> {
+    let dir = fs::read_dir(format!("./{}", dir)).unwrap();
+
+    let mut layouts: HashMap<String, Layout> = HashMap::new();
+    for file in dir.flatten() {
+	if let Some(path) = file.path().to_str() {
+	    if let Ok(mut l) = Layout::load(path) {
+		if l.link == Some(String::from("")) {
+		    l.link = None;
+		}
+		let name = l.name.to_ascii_lowercase();
+		layouts.insert(name, l);
+	    }
+	}
+    }
+    layouts
+}
+
+pub fn closest_match(name: String, names: &[&str]) -> String {
+    fuzzy_search_best_n(&name, names, 1)[0].0.to_string()
 }
 
 pub fn display_matrix(m: &[Vec<char>]) -> String {

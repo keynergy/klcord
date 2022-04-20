@@ -1,46 +1,31 @@
 use keynergy::Layout;
+use layoutexport::XkbLayout;
 use serenity::{
     async_trait,
     model::{channel::Message, gateway::Ready},
     prelude::*,
 };
-use std::collections::HashMap;
 use std::fs;
-use layoutexport::XkbLayout;
+use std::{collections::HashMap, process::Command};
 
 use crate::utility::*;
 
 pub struct Bot {
     layouts: HashMap<String, Layout>,
-    names: Vec<String>,
 }
 
 impl Bot {
     pub fn new() -> Bot {
         Bot {
             layouts: HashMap::new(),
-            names: Vec::new(),
         }
     }
 
     pub fn with_layouts_in_dir(dir: &str) -> Bot {
         let mut bot = Bot::new();
-        let dir = fs::read_dir(format!("./{}", dir)).unwrap();
         print!("Reading layouts... ");
-
-        for file in dir.flatten() {
-            if let Some(path) = file.path().to_str() {
-                if let Ok(mut l) = Layout::load(path) {
-                    if l.link == Some(String::from("")) {
-                        l.link = None;
-                    }
-                    let name = l.name.to_ascii_lowercase();
-                    bot.layouts.insert(name.clone(), l); //we do a little cloning :tf:
-                    bot.names.push(name);
-                }
-            }
-        }
-        println!("done!");
+        bot.layouts = get_layouts_from_dir(dir);
+        println!("Done!");
         bot
     }
 }
@@ -69,29 +54,30 @@ impl EventHandler for Bot {
 
                 match self.layouts.get(&name) {
                     None => match &name[..] {
-			"taipo" => {
-			    let path = vec!["taipo.png"];
-			    let result = msg.channel_id.send_files(&ctx, path, |m| m.content("Taipo | Created by whorf"))
-				.await;
-			    result.unwrap();
-			},
-			_ => {
+                        "taipo" => {
+                            let path = vec!["taipo.png"];
+                            let result = msg
+                                .channel_id
+                                .send_files(&ctx, path, |m| m.content("Taipo | Created by whorf"))
+                                .await;
+                            result.unwrap();
+                        }
+                        _ => {
                             send_message(
-				&ctx,
-				&msg,
-				format!(
+                                &ctx,
+                                &msg,
+                                format!(
                                     "This layout does not exist.\n\
 				     Did you mean {}?",
-                                    closest_match(name, &self.names)
-				),
+                                    closest_match(name, &self.layouts.keys().map(|x| x.as_str()).collect::<Vec<&str>>()[..])
+                                ),
                             )
 				.await;
-			}
-			
+                        }
                     },
 
                     Some(l) => {
-			send_message(&ctx, &msg, print_layout(l)).await;
+                        send_message(&ctx, &msg, print_layout(l)).await;
                     }
                 }
             }
@@ -135,12 +121,12 @@ impl EventHandler for Bot {
                 send_message(&ctx, &msg, newtext).await;
             }
         } else if msg.content.starts_with("!xkb") {
-	    let split: Vec<&str> = msg.content.split_whitespace().collect();
-	    if split.len() == 1 {
-		send_message(&ctx, &msg, "Usage: `!xkb LAYOUT`").await;
-	    }
-	    let name = split[1..].join(" ").to_ascii_lowercase();
-	    match self.layouts.get(&name) {
+            let split: Vec<&str> = msg.content.split_whitespace().collect();
+            if split.len() == 1 {
+                send_message(&ctx, &msg, "Usage: `!xkb LAYOUT`").await;
+            }
+            let name = split[1..].join(" ").to_ascii_lowercase();
+            match self.layouts.get(&name) {
                 None => {
                     send_message(
                         &ctx,
@@ -148,26 +134,28 @@ impl EventHandler for Bot {
                         format!(
                             "This layout does not exist.\n\
 			     Did you mean {}?",
-                            closest_match(name, &self.names)
+                            closest_match(name, &self.layouts.keys().map(|x| x.as_str()).collect::<Vec<&str>>()[..])
                         ),
-                    )
+			)
 			.await;
-                },
-		Some(l) => {
-		    let xkb = match XkbLayout::from(l) {
-			Ok(x) => x,
-			Err(_) => return
-		    };
+                }
+                Some(l) => {
+                    let xkb = match XkbLayout::from(l) {
+                        Ok(x) => x,
+                        Err(_) => return,
+                    };
 
-		    send_message(
-			&ctx,
-			&msg,
-			format!("```\n{}\n```", xkb.content)
-		    ).await;
-		    
-		}
-	    };
-	}
+                    send_message(&ctx, &msg, format!("```\n{}\n```", xkb.content)).await;
+                }
+            };
+        } else if msg.content.starts_with("!refresh") {
+            // semi's id, change if self-hosting
+            if msg.author.id.to_string().eq("341813193464872991") {
+                Command::new("git").arg("pull");
+                let self = &Bot::with_layouts_in_dir("./layouts");
+                send_message(&ctx, &msg, "Done :thumbsup:").await;
+            }
+        }
     }
 
     // Set a handler to be called on the `ready` event. This is called when a
@@ -177,6 +165,6 @@ impl EventHandler for Bot {
     //
     // In this case, just print what the current user's username is.
     async fn ready(&self, _: Context, ready: Ready) {
-	println!("{} is connected!", ready.user.name);
+        println!("{} is connected!", ready.user.name);
     }
 }
