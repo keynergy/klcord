@@ -1,0 +1,12 @@
+name = "ints"
+author = "Tanamr"
+link = "https://github.com/samuelxyz/layouts"
+year = 2022
+
+[formats.angle]
+matrix = [["f", "o", "u", "m", "j", "q", "g", "d", "p", ","],
+["h", "a", "e", "r", "x", "v", "s", "t", "n", "i"],
+["'", "/", "l", "w", "z", "y", "c", "k", "b", "."]]
+
+map = {}
+home_row = 1
