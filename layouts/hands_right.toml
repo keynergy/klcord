@@ -1,0 +1,12 @@
+name = "Hands Right"
+author = "Oxey"
+link = "https://o-x-e-y.github.io/layouts/hands_right/index.html"
+year = 2022
+
+[formats.standard]
+matrix = [["v", "l", "c", "d", "k", "z", "'", "u", "o", "y"],
+["n", "r", "s", "t", "g", "p", "h", "e", "a", "i"],
+["q", "x", "w", "m", "j", "b", "f", ",", ".", ";"]]
+
+map = {}
+home_row = 1
