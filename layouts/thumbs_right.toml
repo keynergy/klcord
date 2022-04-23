@@ -1,0 +1,12 @@
+name = "Thumbs Right"
+author = "Boo"
+link = ""
+year = 2022
+
+[formats.standard]
+matrix = [["x", "l", "c", "g", "k", "z", "'", "u", "o", "y"],
+["n", "r", "s", "t", "d", "b", "h", "e", "a", "i"],
+["q", "w", "v", "m", "j", "p", "f", ".", ",", ";"]]
+
+map = {}
+home_row = 1

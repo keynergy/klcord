@@ -1,0 +1,12 @@
+name = "Crest"
+author = "Oxey"
+link = "https://o-x-e-y.github.io/layouts/crest/index.html"
+year = 2022
+
+[formats.standard]
+matrix = [["w", "l", "f", "d", "k", "z", "j", "u", "o", "y"],
+["c", "r", "s", "t", "g", "p", "n", "e", "a", "i"],
+["'", "x", "v", "m", "q", "b", "h", ",", ".", ";"]]
+
+map = {}
+home_row = 1
