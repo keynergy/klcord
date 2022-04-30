@@ -1,0 +1,12 @@
+name = "sioul"
+author = "boo"
+link = ""
+year = 2022
+
+[formats.standard]
+matrix = [["x", "c", "l", "g", "k", "q", "j", "u", "o", "y"],
+["r", "s", "t", "h", "d", "b", "n", "e", "a", "i"],
+["'", "w", "v", "m", "z", "p", "f", ".", ",", ";"]]
+
+map = {}
+home_row = 1
