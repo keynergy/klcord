@@ -1,0 +1,12 @@
+name = "zwou"
+author = "Flarefin"
+link = ""
+year = 2022
+
+[formats.standard]
+matrix = [["p", "l", "d", "f", "k", "z", "w", "o", "u", ","],
+["n", "r", "t", "h", "y", "v", "s", "a", "e", "i", "/"],
+["q", "j", "m", "c", "g", "x", "b", "'", ";", "."]]
+
+map = {}
+home_row = 1
