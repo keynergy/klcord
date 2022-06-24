@@ -1,12 +1,12 @@
 name = "CTGAP 4.0"
 author = "Colby Chai"
-link = ""
+link = "github.com/CTGAP/ctgap-keyboard-layout"
 year = 2022
 
 [formats.standard]
-matrix = [["q", "c", "l", "p", "v", "x", "k", "o", "u", "/"],
-["r", "s", "n", "t", "g", "y", "h", "e", "i", "a"],
-["z", "w", "m", "d", "b", "j", "f", "'", ",", "."]]
+matrix = [["x", "c", "l", "m", "k", "j", "y", "o", "u", "/"],
+["r", "s", "t", "h", "b", "p", "n", "e", "i", "a"],
+["q", "g", "w", "d", "v", "z", "f", "'", ",", "."]]
 
 map = {}
 home_row = 1
