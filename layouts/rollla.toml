@@ -1,0 +1,14 @@
+name = "Rollla"
+author = "<3 and Tanamr"
+link = ""
+year = 2022
+
+[formats]
+angle_preferred = true
+[formats.angle]
+matrix = [["y", "o", "u", "b", ".", "x", "k", "c", "l", "v"],
+["i", "a", "e", "n", ",", "m", "h", "s", "r", "t"],
+["'", "/", "p", "w", "z", "f", "d", "g", "j", "q"]]
+
+map = {}
+home_row = 1
