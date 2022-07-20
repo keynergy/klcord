@@ -3,10 +3,21 @@ author = "Octahedron"
 link = ""
 year = 2021
 
+[formats]
+angle_preferred = true
+
 [formats.standard]
 matrix = [["y", "o", "u", "k", "x", "g", "w", "d", "l", ","],
 ["i", "a", "e", "n", "f", "b", "s", "t", "r", "c"],
 ["q", "/", "z", "h", "'", "v", "p", "m", "j", "."]]
+
+map = {}
+home_row = 1
+
+[formats.angle]
+matrix = [["y", "o", "u", "k", "x", "g", "w", "d", "l", ","],
+["i", "a", "e", "n", "f", "b", "s", "t", "r", "c"],
+["/", "z", "h", "'", "q", "v", "p", "m", "j", "."]]
 
 map = {}
 home_row = 1

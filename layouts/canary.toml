@@ -1,0 +1,23 @@
+name = "Canary"
+author = "AKL Creators"
+link = "github.com/Apsu/Canary"
+year = 2022
+
+[formats]
+angle_preferred = true
+
+[formats.angle]
+matrix = [["w", "l", "y", "p", "k", "z", "x", "o", "u", ";"],
+["c", "r", "s", "t", "b", "f", "n", "e", "i", "a"],
+["j", "v", "d", "g", "q", "m", "h", "/", ",", "."]]
+
+map = {}
+home_row = 1
+
+[formats.standard]
+matrix = [["w", "l", "y", "p", "b", "z", "f", "o", "u", "'"],
+["c", "r", "s", "t", "g", "m", "n", "e", "i", "a"],
+["q", "j", "v", "d", "k", "x", "h", "/", ",", "."]]
+
+map = {}
+home_row = 1

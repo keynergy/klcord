@@ -34,15 +34,18 @@ pub fn closest_match(name: String, names: &[&str]) -> String {
     fuzzy_search_best_n(&name, names, 1)[0].0.to_string()
 }
 
-pub fn display_matrix(m: &[Vec<char>]) -> String {
+pub fn display_matrix(m: &[Vec<char>], angle: bool) -> String {
     let mut s = String::new();
-    for r in m.iter() {
-        for (i, c) in r.iter().enumerate() {
-            s.push(*c);
-            s.push(' ');
-            if i == 4 {
+    for (y, r) in m.iter().enumerate() {
+	if angle && y == 2 {
+	    s.push(' ');
+	}
+        for (x, c) in r.iter().enumerate() {
+	    s.push(*c);
+	    s.push(' ');
+	    if x == 4 {
                 s.push(' ');
-            }
+	    }
         }
         s.push('\n');
     }
@@ -50,6 +53,7 @@ pub fn display_matrix(m: &[Vec<char>]) -> String {
 }
 
 pub fn print_layout(l: &Layout) -> String {
+    let angle = l.angle_is_preferred();
     let year = match l.year {
         0 => "".to_string(),
         _ => std::format!("({})", l.year),
@@ -58,12 +62,19 @@ pub fn print_layout(l: &Layout) -> String {
         Some(x) => std::format!("<https://{}>\n", x),
         None => "".to_string(),
     };
+    let keys = match angle {
+	true => l.formats.angle.as_ref(),
+	false => l.formats.standard.as_ref(),
+    };
     std::format!(
-        "**{}**\nCreated by {} {}\n{}```\n{}\n```",
+        "**{}** {}\nCreated by {} {}\n{}```\n{}\n```",
         l.name,
+	if angle {
+	    "with angle mod"
+	} else {""},
         l.author,
         year,
         link,
-        display_matrix(&l.formats.standard.as_ref().unwrap().matrix)
+        display_matrix(&keys.unwrap().matrix, angle)
     )
 }

@@ -5,7 +5,6 @@ use serenity::{
     model::{channel::Message, gateway::Ready},
     prelude::*,
 };
-use std::fs;
 use std::{collections::HashMap, process::Command};
 
 use crate::utility::*;
@@ -69,7 +68,14 @@ impl EventHandler for Bot {
                                 format!(
                                     "This layout does not exist.\n\
 				     Did you mean {}?",
-                                    closest_match(name, &self.layouts.keys().map(|x| x.as_str()).collect::<Vec<&str>>()[..])
+                                    closest_match(
+                                        name,
+                                        &self
+                                            .layouts
+                                            .keys()
+                                            .map(|x| x.as_str())
+                                            .collect::<Vec<&str>>()[..]
+                                    )
                                 ),
                             )
 				.await;
@@ -134,10 +140,17 @@ impl EventHandler for Bot {
                         format!(
                             "This layout does not exist.\n\
 			     Did you mean {}?",
-                            closest_match(name, &self.layouts.keys().map(|x| x.as_str()).collect::<Vec<&str>>()[..])
+                            closest_match(
+                                name,
+                                &self
+                                    .layouts
+                                    .keys()
+                                    .map(|x| x.as_str())
+                                    .collect::<Vec<&str>>()[..]
+                            )
                         ),
-			)
-			.await;
+                    )
+                    .await;
                 }
                 Some(l) => {
                     let xkb = match XkbLayout::from(l) {

@@ -3,6 +3,9 @@ author = "Tanamr"
 link = "github.com/samuelxyz/layouts"
 year = 2022
 
+[formats]
+angle_preferred = true
+
 [formats.angle]
 matrix = [["f", "o", "u", "m", "j", "q", "g", "d", "p", ","],
 ["h", "a", "e", "r", "x", "v", "s", "t", "n", "i"],
