@@ -1,0 +1,23 @@
+name = "seht-drai"
+author = "Tanamr"
+link = "github.com/samuelxyz/layouts"
+year = 2022
+
+[formats]
+angle_preferred = true
+
+[formats.standard]
+matrix = [["f", "u", "l", "v", "b", ";", "g", "n", "o", "j"],
+["s", "e", "h", "t", "k", "q", "d", "r", "a", "i"],
+["z", "'", "m", "p", "w", "y", "c", "x", "/", ","]]
+
+map = {}
+home_row = 1
+
+[formats.angle]
+matrix = [["f", "u", "l", "v", "b", ";", "g", "n", "o", "j"],
+["s", "e", "h", "t", "k", "z", "d", "r", "a", "i"],
+["'", "m", "p", "w", "q", "y", "c", "x", "/", ","]]
+
+map = {}
+home_row = 1
