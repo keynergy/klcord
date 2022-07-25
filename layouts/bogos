@@ -7,4 +7,4 @@ year = 2021
 matrix = [[b, i, n, t, e,  d]]
 
 map = {}
-home_row = 1
+home_row = 0
