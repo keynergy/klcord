@@ -1,0 +1,12 @@
+name = "Fnerb"
+author = "Fnerb"
+link = "discord.com/channels/807843650717483049/807843651304161342/987589481722966056"
+year = 2021
+
+[formats.standard]
+matrix = [["t", "w", "g", "s", "b", "q", "l", "n", "a", "y"],
+["r", "h", "j", "k", "d", "u", "p", "e", "o", "i", ";"],
+["x", "f", "m", "z", "c", "v", "'", ",", ".", "/"]]
+
+map = {}
+home_row = 1
