@@ -1,0 +1,12 @@
+name = "Murgle"
+author = "Murgle"
+link = "discord.com/channels/807843650717483049/807843651304161342/987593390201921536"
+year = 2021
+
+[formats.standard]
+matrix = [["m", "l", "d", "f", "k", "b", "p", "u", ",", "'"],
+["n", "r", "t", "h", "v", "g", "y", "e", "i", "a", "/"],
+["q", "j", "(", ")", "x", "z", "w", "d", "s", ";", "."]]
+
+map = {}
+home_row = 1
