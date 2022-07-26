@@ -1,0 +1,11 @@
+name = "Lumin"
+author = "Roman Koshchei"
+link = "lumin-layout.surge.sh"
+year = 2022
+
+[formats.standard]
+matrix = [["y", "l", "u", "o", "'", "g", "p", "m", "h", "v"],
+["i", "r", "e", "a", ".", "d", "c", "t", "n", "s", "z"],
+["/", "j", ",", "q", ";", "w", "f", "k", "b", "x"]]
+
+map = {}
