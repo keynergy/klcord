@@ -18,12 +18,17 @@ pub fn get_layouts_from_dir(dir: &str) -> HashMap<String, Layout> {
     let mut layouts: HashMap<String, Layout> = HashMap::new();
     for file in dir.flatten() {
 	if let Some(path) = file.path().to_str() {
-	    if let Ok(mut l) = Layout::load(path) {
-		if l.link == Some(String::from("")) {
-		    l.link = None;
+	    match Layout::load(path) {
+		Ok(mut l) => {
+		    if l.link == Some(String::from("")) {
+			l.link = None;
+		    }
+		    let name = l.name.to_ascii_lowercase();
+		    layouts.insert(name, l);
 		}
-		let name = l.name.to_ascii_lowercase();
-		layouts.insert(name, l);
+		Err(e) => {
+		    println!("{}: {:?}", path, e);
+		}
 	    }
 	}
     }

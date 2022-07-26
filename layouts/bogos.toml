@@ -1,10 +1,10 @@
 name = "bogos"
 author = "<:Binted:1001130431623729182>"
-link = "https://www.youtube.com/watch?v=kurAJvAHB6I"
+link = "www.youtube.com/watch?v=kurAJvAHB6I"
 year = 2021
 
 [formats.standard]
-matrix = [[b, i, n, t, e,  d]]
+matrix = [["b", "i", "n", "t", "e", "d"]]
 
 map = {}
 home_row = 0
