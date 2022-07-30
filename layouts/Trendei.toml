@@ -1,0 +1,23 @@
+name = "Trendei"
+author = "ec0vid"
+link = ""
+year = 2021
+
+[formats]
+angle_preferred = true
+
+[formats.angle]
+matrix = [["k", "l", "h", "w", "b", "z", "f", "o", "u", ";"],
+["t", "r", "n", "d", "c", "y", "s", "e", "i", "a"],
+["j", "m", "g", "p", "q", "x", "v", "'", ",", "."]]
+
+map = {}
+home_row = 1
+
+[formats.standard]
+matrix = [["k", "l", "h", "w", "b", "z", "f", "o", "u", ";"],
+["t", "r", "n", "d", "c", "y", "s", "e", "i", "a"],
+["q", "j", "m", "g", "p", "x", "v", "'", ",", "."]]
+
+map = {}
+home_row = 1
