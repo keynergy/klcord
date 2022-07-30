@@ -1,0 +1,12 @@
+name = "Sturdy"
+author = "Oxeylyzer td"
+link = "layouts.wiki/sturdy"
+year = 2022
+
+[formats.standard]
+matrix = [["v", "m", "l", "c", "p", "q", "f", "o", "u", "j", "/"],
+["s", "t", "r", "d", "y", ".", "n", "a", "e", "i", "-"],
+["z", "k", "x", "g", "w", "b", "h", "'", ";", ","]]
+
+map = {}
+home_row = 1
