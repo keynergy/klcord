@@ -1,0 +1,12 @@
+name = "Wreath"
+author = "Apsu"
+link = ""
+year = 2021
+
+[formats.standard]
+matrix = [["j", "g", "d", "f", "b", "q", "l", "u", "o", "y"],
+["n", "s", "t", "h", "k", "w", "r", "e", "a", "i"],
+["x", "c", "m", "p", "v", "z", ",", ".", "'", "/"]]
+
+map = {}
+home_row = 1
