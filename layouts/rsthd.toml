@@ -1,0 +1,14 @@
+name = "RSTHD"
+author = "xsznix"
+link = "xsznix.wordpress.com/2016/05/16/introducing-the-rsthd-layout/"
+year = 2016
+
+[formats.standard]
+matrix = [["w", "g", "d", "f", "b", "q", "l", "u", "o", "y"],
+["r", "s", "t", "h", "k", "j", "n", "e", "a", "i"],
+["x", "c", "m", "p", "v", "z", ",", ".", "'", "/"],
+[" ", " ", " ", " ", "e"]]
+
+map = {}
+home_row = 1
+thumb_row = 3
