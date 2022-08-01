@@ -11,3 +11,4 @@ matrix = [["w", "g", "d", "f", "b", "q", "l", "u", "o", "y"],
 
 map = {}
 home_row = 1
+thumb_row = 3
