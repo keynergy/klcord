@@ -1,0 +1,14 @@
+name = "Crouton"
+author = "Flarefin"
+link = ""
+year = 2022
+
+[formats.standard]
+matrix = [["w", "l", "d", "p", "q", "z", "k", "o", "u", ","],
+["c", "r", "t", "n", "v", "y", "h", "a", "e", "i", "/"],
+["g", "j", "m", "b", " ", " ", "x", "'", ";", "."],
+[" ", " ", " ", " ", " ", "f", "s"]]
+
+map = {}
+home_row = 1
+thumb_row = 3
