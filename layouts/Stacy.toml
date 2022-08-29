@@ -1,0 +1,23 @@
+name = "Stacy"
+author = "ec0vid"
+link = ""
+year = 2022
+
+[formats]
+angle_preferred = true
+
+[formats.angle]
+matrix = [[".", "u", "o", "f", "p", "q", "k", "h", "l", "v"],
+["a", "i", "e", "c", "y", "j", "t", "n", "r", "s"],
+[",", "'", "w", "g", "z", "b", "d", "m", "x"]]
+
+map = {}
+home_row = 1
+
+[formats.standard]
+matrix = [[";", "u", "o", "f", "p", "q", "k", "h", "l", "v"],
+["a", "i", "e", "c", "y", "b", "t", "n", "r", "s"],
+[".", ",", "'", "w", "g", "z", "d", "m", "j", "x"]]
+
+map = {}
+home_row = 1
