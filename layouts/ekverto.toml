@@ -1,0 +1,12 @@
+name = "Ekverto"
+author = "Benno Schulenberg"
+link = ""
+year = 2007
+
+[formats.standard]
+matrix = [["ŝ", "ĝ", "e", "r", "t", "ŭ", "u", "i", "o", "p", "ĵ", "ĥ", "\\"],
+["a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'"],
+["z", "ĉ", "c", "v", "b", "n", "m", ",", ".", "/"]]
+
+map = {}
+home_row = 1
