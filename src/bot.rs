@@ -161,6 +161,11 @@ impl EventHandler for Bot {
                     send_message(&ctx, &msg, format!("```\n{}\n```", xkb.content)).await;
                 }
             };
+        } else if msg.content.starts_with("!layouts") {
+            send_message(&ctx, &msg, format!(
+                "this list would be too chonky. Here, take this instead:\n
+                https://github.com/keynergy/klcord/tree/main/layouts"
+            )).await;
         } else if msg.content.starts_with("!refresh") {
             // semi's id, change if self-hosting
             if msg.author.id.to_string().eq("341813193464872991") {
