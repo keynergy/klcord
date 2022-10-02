@@ -42,8 +42,8 @@ impl EventHandler for Bot {
         }
         if msg.content.starts_with("!layouts") {
         	send_message(&ctx, &msg, format!(
-        		"this list would be too chonky. Here, take this instead:\n
-        		https://github.com/keynergy/klcord/tree/main/layouts"
+        	    "this list would be too chonky. Here, take this instead:
+<https://github.com/keynergy/klcord/tree/main/layouts>"
        		)).await;
        	} else if msg.content.starts_with("!layout") {
             let split: Vec<&str> = msg.content.split_whitespace().collect();
