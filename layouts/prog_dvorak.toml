@@ -1,0 +1,13 @@
+name = "Programmer Dvorak"
+author = "Roland Kaufmann"
+link = "https://www.kaufmann.no/roland/dvorak/"
+year = 1997
+
+[formats.standard]
+matrix = [["&", "[", "{", "}", "(", "=", "*", ")", "+", "]", "!", "#"],
+[";", ",", ".", "p", "y", "f", "g", "c", "r", "l", "/", "@", "\\"],
+["a", "o", "e", "u", "i", "d", "h", "t", "n", "s", "-"],
+["'", "q", "j", "k", "x", "b", "m", "w", "v", "z"]]
+
+map = {}
+home_row = 2
