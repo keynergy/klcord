@@ -1,0 +1,13 @@
+name = "Classic Dvorak"
+author = "Piter Punk"
+link = ""
+year = 2006
+
+[formats.standard]
+matrix = [["[", "7", "5", "3", "1", "9", "0", "2", "4", "6", "8", "]"],
+["/", ",", ".", "p", "y", "f", "g", "c", "r", "l", "'", "=", "\\"],
+["a", "o", "e", "u", "i", "d", "h", "t", "n", "s", "-"],
+[";", "q", "j", "k", "x", "b", "m", "w", "v", "z"]]
+
+map = {}
+home_row = 2
