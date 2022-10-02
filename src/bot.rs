@@ -40,7 +40,12 @@ impl EventHandler for Bot {
         if msg.author.bot {
             return;
         }
-        if msg.content.starts_with("!layout") {
+        if msg.content.starts_with("!layouts") {
+        	send_message(&ctx, &msg, format!(
+        		"this list would be too chonky. Here, take this instead:\n
+        		https://github.com/keynergy/klcord/tree/main/layouts"
+       		)).await;
+       	} else if msg.content.starts_with("!layout") {
             let split: Vec<&str> = msg.content.split_whitespace().collect();
             if split.len() == 1 {
                 send_message(&ctx, &msg, "Usage: `!layout <layout name>`").await;
@@ -160,12 +165,7 @@ impl EventHandler for Bot {
 
                     send_message(&ctx, &msg, format!("```\n{}\n```", xkb.content)).await;
                 }
-            };
-        } else if msg.content.starts_with("!layouts") {
-            send_message(&ctx, &msg, format!(
-                "this list would be too chonky. Here, take this instead:\n
-                https://github.com/keynergy/klcord/tree/main/layouts"
-            )).await;
+            }; 
         } else if msg.content.starts_with("!refresh") {
             // semi's id, change if self-hosting
             if msg.author.id.to_string().eq("341813193464872991") {
