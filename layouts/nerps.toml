@@ -10,3 +10,11 @@ matrix = [["x", "l", "d", "p", "v", "z", "k", "o", "u", ";"],
 
 map = {}
 home_row = 1
+
+[formats.angle]
+matrix = [["x", "l", "d", "p", "v", "z", "k", "o", "u", ";"],
+["n", "r", "t", "s", "g", "y", "h", "e", "i", "a", "/"],
+["j", "m", "c", "w", "q", "b", "f", "'", ",", "."]]
+
+map = {}
+home_row = 1
