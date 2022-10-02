@@ -62,7 +62,7 @@ impl EventHandler for Bot {
                             let path = vec!["taipo.png"];
                             let result = msg
                                 .channel_id
-                                .send_files(&ctx, path, |m| m.content("Taipo | Created by whorf"))
+                                .send_files(&ctx, path, |m| m.content("Taipo | Created by whorf\nhttps://inkeys.wiki/en/keymaps/taipo"))
                                 .await;
                             result.unwrap();
                         }
