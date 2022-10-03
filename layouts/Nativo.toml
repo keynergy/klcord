@@ -1,0 +1,12 @@
+name = "Nativo"
+author = "Ari Caldeira"
+link = ""
+year = 2005
+
+[formats.standard]
+matrix = [["/", ",", ".", "h", "x", "w", "l", "t", "c", "p", "~", "-"],
+["i", "e", "a", "o", "u", "m", "d", "s", "r", "n", "´", "'"],
+["y", "ç", "j", "b", "k", "q", "v", "g", "f", "z"]]
+
+map = {}
+home_row = 1
