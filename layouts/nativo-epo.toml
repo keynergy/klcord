@@ -1,0 +1,12 @@
+name = "Esperanto Nativo"
+author = "Ari Caldeira"
+link = ""
+year = 2005
+
+[formats.standard]
+matrix = [["/", ",", ".", "h", "ĉ", "ŭ", "l", "t", "c", "p", "~", "-"],
+["i", "e", "a", "o", "u", "m", "d", "s", "r", "n", "´", "'"],
+["ĵ", "ŝ", "j", "b", "k", "ĝ", "v", "g", "f", "z"]]
+
+map = {}
+home_row = 1
