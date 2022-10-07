@@ -68,18 +68,17 @@ pub fn print_layout(l: &Layout) -> String {
         None => "".to_string(),
     };
     let keys = match angle {
-	true => l.formats.angle.as_ref(),
-	false => l.formats.standard.as_ref(),
+        true => l.formats.angle.as_ref(),
+        false => l.formats.standard.as_ref(),
     };
     std::format!(
-        "**{}** {}\nCreated by {} {}\n{}```\n{}\n```",
+        "**{}** {}\nCreated by {} {}\n{}\nMade for {}```\n{}\n```",
         l.name,
-	if angle {
-	    "with angle mod"
-	} else {""},
+        if angle { "with angle mod" } else { "" },
         l.author,
         year,
         link,
+        l.language,
         display_matrix(&keys.unwrap().matrix, angle)
     )
 }
