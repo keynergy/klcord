@@ -1,0 +1,14 @@
+name = "QWERTY 2"
+author = "Christopher Latham Sholes"
+link = ""
+year = 1889
+
+[formats]
+angle_preferred = true
+[formats.angle]
+matrix = [["x", "p", "m", "c", "h", "r", "t", "n", "s", "d", "g", "k"],
+["j", "b", "w", "f", "l", "a", "e", "i", "o", "u", "y"],
+["q", "v", ":", ";", ".", ",", "!", "?", "-"]]
+
+map = {}
+home_row = 1
