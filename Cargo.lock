@@ -507,9 +507,9 @@ dependencies = [
 
 [[package]]
 name = "keynergy"
-version = "0.2.6"
+version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "df8d9566408097e926c60c7d7a6841b50281dbddf78f74baaf74708f07856b0a"
+checksum = "7e7dc7c2b2e85a459478d3410404dd38bed84883cb700403fe6498e32061e5ee"
 dependencies = [
  "serde",
  "toml",
