@@ -1,0 +1,28 @@
+name = "Sunntig"
+author = "Oxey"
+language = "Swiss German"
+link = ""
+year = 2022
+
+[formats]
+angle_preferred = false
+
+[formats.angle]
+matrix = [
+  ["k", "m", "l", "b", "p",  "'", ",", "o", "u", "ü",],
+  ["h", "s", "n", "t", "g",  ".", "r", "e", "i", "a",],
+  ["f", "w", "d", "v", "z",  "j", "c", "ä", "y", "ö",]
+]
+
+map = {}
+home_row = 1
+
+[formats.standard]
+matrix = [
+  ["z", "m", "l", "b", "p",  "'", ",", "o", "u", "ü",],
+  ["h", "s", "n", "t", "g",  ".", "r", "e", "i", "a",],
+  ["k", "f", "w", "d", "v",  "j", "c", "ä", "y", "ö",]
+]
+
+map = {}
+home_row = 1
