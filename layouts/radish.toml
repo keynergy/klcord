@@ -1,7 +1,7 @@
-name = "Dvorak"
-author = "August Dvorak"
-link = ""
-year = 1936
+name = "Radish"
+author = "Qwertron"
+link = "https://discord.com/channels/807843650717483049/807844118826975262/980842532600705064"
+year = 2022
 
 [formats.standard]
 matrix = [["v", "c", "w", "f", "q", "z", "p", "u", "o", "y", "/", "="],
