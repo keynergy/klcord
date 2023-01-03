@@ -1,6 +1,6 @@
 name = "NRSTmak"
 author = "ClemenPine"
-link = "https://github.com/ClemenPine/nrstmak"
+link = "github.com/ClemenPine/nrstmak"
 year = 2022
 
 [formats.standard]
