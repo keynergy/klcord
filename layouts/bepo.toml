@@ -1,7 +1,7 @@
-name = "BÉPO"
+name = "bépo"
 author = "Frédéric Boiteux"
 language = "French"
-link = "https://bepo.fr/"
+link = "bepo.fr"
 year = 2008
 
 [formats.standard]
